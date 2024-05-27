@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diário de Bordo (M1/M2)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label, input, select, textarea, button {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 1em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Diário de Bordo (M1/M2)</h1>
+    <form id="diarioForm">
+        <label for="aluno">Aluno:</label>
+        <input type="text" id="aluno" name="aluno" required>
+
+        <label for="etapa">Etapa:</label>
+        <input type="text" id="etapa" name="etapa" required>
+
+        <label for="ano_letivo">Ano letivo:</label>
+        <input type="text" id="ano_letivo" name="ano_letivo" required>
+
+        <label for="professor">Professor:</label>
+        <input type="text" id="professor" name="professor" required>
+
+        <label for="turma">Turma:</label>
+        <input type="text" id="turma" name="turma" required>
+
+        <h2>Aspectos Avaliados</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Aspecto</th>
+                    <th>Sim</th>
+                    <th>Não</th>
+                    <th>Em Processo de Construção</th>
+                </tr>
+            </thead>
+            <tbody id="aspectos">
+                <tr>
+                    <td>Reconhece todas as letras do alfabeto</td>
+                    <td><input type="radio" name="letras_alfabeto" value="sim"></td>
+                    <td><input type="radio" name="letras_alfabeto" value="nao"></td>
+                    <td><input type="radio" name="letras_alfabeto" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Identifica as vogais</td>
+                    <td><input type="radio" name="identifica_vogais" value="sim"></td>
+                    <td><input type="radio" name="identifica_vogais" value="nao"></td>
+                    <td><input type="radio" name="identifica_vogais" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Identifica a letra inicial das figuras</td>
+                    <td><input type="radio" name="letra_inicial_figuras" value="sim"></td>
+                    <td><input type="radio" name="letra_inicial_figuras" value="nao"></td>
+                    <td><input type="radio" name="letra_inicial_figuras" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Identifica o próprio nome em meio aos nomes dos colegas</td>
+                    <td><input type="radio" name="nome_colegas" value="sim"></td>
+                    <td><input type="radio" name="nome_colegas" value="nao"></td>
+                    <td><input type="radio" name="nome_colegas" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Copia o próprio nome com modelo, coordenando os movimentos visuais e motores</td>
+                    <td><input type="radio" name="copia_nome_modelo" value="sim"></td>
+                    <td><input type="radio" name="copia_nome_modelo" value="nao"></td>
+                    <td><input type="radio" name="copia_nome_modelo" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Escreve o próprio nome sem modelo e sem ajuda</td>
+                    <td><input type="radio" name="nome_sem_modelo" value="sim"></td>
+                    <td><input type="radio" name="nome_sem_modelo" value="nao"></td>
+                    <td><input type="radio" name="nome_sem_modelo" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Identifica cores</td>
+                    <td><input type="radio" name="identifica_cores" value="sim"></td>
+                    <td><input type="radio" name="identifica_cores" value="nao"></td>
+                    <td><input type="radio" name="identifica_cores" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Compreende histórias e consegue ilustrá-las</td>
+                    <td><input type="radio" name="compreende_historias" value="sim"></td>
+                    <td><input type="radio" name="compreende_historias" value="nao"></td>
+                    <td><input type="radio" name="compreende_historias" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Consegue montar e desmontar brinquedos de encaixe, tridimensionais sem ajuda</td>
+                    <td><input type="radio" name="monta_brinquedos" value="sim"></td>
+                    <td><input type="radio" name="monta_brinquedos" value="nao"></td>
+                    <td><input type="radio" name="monta_brinquedos" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Discrimina semelhanças e diferenças nos objetos</td>
+                    <td><input type="radio" name="discrimina_seme_dife" value="sim"></td>
+                    <td><input type="radio" name="discrimina_seme_dife" value="nao"></td>
+                    <td><input type="radio" name="discrimina_seme_dife" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Reconhece as formas geométricas</td>
+                    <td><input type="radio" name="formas_geometricas" value="sim"></td>
+                    <td><input type="radio" name="formas_geometricas" value="nao"></td>
+                    <td><input type="radio" name="formas_geometricas" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Identifica e reconhece números até 20</td>
+                    <td><input type="radio" name="numeros_ate_20" value="sim"></td>
+                    <td><input type="radio" name="numeros_ate_20" value="nao"></td>
+                    <td><input type="radio" name="numeros_ate_20" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Precisa de auxílio e incentivo na realização de atividades que demandam maior concentração</td>
+                    <td><input type="radio" name="auxilio_concentracao" value="sim"></td>
+                    <td><input type="radio" name="auxilio_concentracao" value="nao"></td>
+                    <td><input type="radio" name="auxilio_concentracao" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Externa suas ideias durante grande parte do período em que está em sala de aula, por vezes, comprometendo o processo de aprendizagem de si próprio e dos colegas</td>
+                    <td><input type="radio" name="externa_ideias" value="sim"></td>
+                    <td><input type="radio" name="externa_ideias" value="nao"></td>
+                    <td><input type="radio" name="externa_ideias" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Ainda não sabe dividir o espaço e os materiais de forma coletiva</td>
+                    <td><input type="radio" name="nao_sabe_dividir" value="sim"></td>
+                    <td><input type="radio" name="nao_sabe_dividir" value="nao"></td>
+                    <td><input type="radio" name="nao_sabe_dividir" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Em diferentes situações se expressa usando de meios físicos para alcançar o que deseja</td>
+                    <td><input type="radio" name="expressa_meios_fisicos" value="sim"></td>
+                    <td><input type="radio" name="expressa_meios_fisicos" value="nao"></td>
+                    <td><input type="radio" name="expressa_meios_fisicos" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Tem dificuldade em aceitar regras de convivência</td>
+                    <td><input type="radio" name="aceitar_regras" value="sim"></td>
+                    <td><input type="radio" name="aceitar_regras" value="nao"></td>
+                    <td><input type="radio" name="aceitar_regras" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Distrai-se com facilidade, tendo necessidade de ajuda</td>
+                    <td><input type="radio" name="distraido" value="sim"></td>
+                    <td><input type="radio" name="distraido" value="nao"></td>
+                    <td><input type="radio" name="distraido" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Precisa de apoio em relação a hábitos de higiene</td>
+                    <td><input type="radio" name="apoio_higiene" value="sim"></td>
+                    <td><input type="radio" name="apoio_higiene" value="nao"></td>
+                    <td><input type="radio" name="apoio_higiene" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Demonstra dificuldade em compreender e assimilar os conteúdos trabalhados</td>
+                    <td><input type="radio" name="dificuldade_conteudos" value="sim"></td>
+                    <td><input type="radio" name="dificuldade_conteudos" value="nao"></td>
+                    <td><input type="radio" name="dificuldade_conteudos" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Participa e realiza todas as atividades propostas em sala de aula</td>
+                    <td><input type="radio" name="participa_atividades" value="sim"></td>
+                    <td><input type="radio" name="participa_atividades" value="nao"></td>
+                    <td><input type="radio" name="participa_atividades" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Sou frequente nas aulas</td>
+                    <td><input type="radio" name="frequente_aulas" value="sim"></td>
+                    <td><input type="radio" name="frequente_aulas" value="nao"></td>
+                    <td><input type="radio" name="frequente_aulas" value="em_processo"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        document.getElementById('diarioForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData.entries());
+            const aspectos = {};
+
+            // Pegando todos os aspectos e seus valores
+            document.querySelectorAll('#aspectos tr').forEach(tr => {
+                const aspecto = tr.cells[0].innerText;
+                const value = Array.from(tr.querySelectorAll('input')).find(input => input.checked)?.value;
+                aspectos[aspecto] = value || 'não_avaliado';
+            });
+
+            data.aspectos = aspectos;
+
+            fetch('/api/dados', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            }).then(response => response.text())
+              .then(result => alert(result))
+              .catch(error => console.error('Erro:', error));
+        });
+    </script>
+</body>
+</html>

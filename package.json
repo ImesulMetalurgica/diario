@@ -1,0 +1,17 @@
+{
+  "name": "diario",
+  "version": "1.0.0",
+  "description": "Diario de Bordo, onde as supervisoras irão identificar e enviar os dados para um banco de dados.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.9.7"
+  }
+}

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diário de Bordo (B1/B2)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label, input, select, textarea, button {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 1em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Diário de Bordo (B1/B2)</h1>
+    <form id="diarioForm">
+        <label for="aluno">Aluno:</label>
+        <input type="text" id="aluno" name="aluno" required>
+
+        <label for="etapa">Etapa:</label>
+        <input type="text" id="etapa" name="etapa" required>
+
+        <label for="ano_letivo">Ano letivo:</label>
+        <input type="text" id="ano_letivo" name="ano_letivo" required>
+
+        <label for="professor">Professor:</label>
+        <input type="text" id="professor" name="professor" required>
+
+        <label for="turma">Turma:</label>
+        <input type="text" id="turma" name="turma" required>
+
+        <h2>Aspectos Avaliados</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Aspecto</th>
+                    <th>Sim</th>
+                    <th>Não</th>
+                    <th>Em Processo de Construção</th>
+                </tr>
+            </thead>
+            <tbody id="aspectos">
+                <tr>
+                    <td>Criança fica de bruços</td>
+                    <td><input type="radio" name="fica_de_bruços" value="sim"></td>
+                    <td><input type="radio" name="fica_de_bruços" value="nao"></td>
+                    <td><input type="radio" name="fica_de_bruços" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Segue com os olhos o que a mão toca</td>
+                    <td><input type="radio" name="segue_olhos_mao" value="sim"></td>
+                    <td><input type="radio" name="segue_olhos_mao" value="nao"></td>
+                    <td><input type="radio" name="segue_olhos_mao" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Vira para os lados</td>
+                    <td><input type="radio" name="vira_lados" value="sim"></td>
+                    <td><input type="radio" name="vira_lados" value="nao"></td>
+                    <td><input type="radio" name="vira_lados" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Levanta a cabeça e os ombros</td>
+                    <td><input type="radio" name="levanta_cabeca_ombros" value="sim"></td>
+                    <td><input type="radio" name="levanta_cabeca_ombros" value="nao"></td>
+                    <td><input type="radio" name="levanta_cabeca_ombros" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Consegue sentar-se</td>
+                    <td><input type="radio" name="sentar_se" value="sim"></td>
+                    <td><input type="radio" name="sentar_se" value="nao"></td>
+                    <td><input type="radio" name="sentar_se" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Fixa o olhar em um ponto móvel</td>
+                    <td><input type="radio" name="fixa_olhar" value="sim"></td>
+                    <td><input type="radio" name="fixa_olhar" value="nao"></td>
+                    <td><input type="radio" name="fixa_olhar" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Arrasta-se</td>
+                    <td><input type="radio" name="arrasta_se" value="sim"></td>
+                    <td><input type="radio" name="arrasta_se" value="nao"></td>
+                    <td><input type="radio" name="arrasta_se" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Tenta engatinhar</td>
+                    <td><input type="radio" name="tenta_engatinhar" value="sim"></td>
+                    <td><input type="radio" name="tenta_engatinhar" value="nao"></td>
+                    <td><input type="radio" name="tenta_engatinhar" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Consegue levantar-se com apoio</td>
+                    <td><input type="radio" name="levantar_apoio" value="sim"></td>
+                    <td><input type="radio" name="levantar_apoio" value="nao"></td>
+                    <td><input type="radio" name="levantar_apoio" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Tenta se comunicar (balbucios e apontamentos)</td>
+                    <td><input type="radio" name="comunica_balbucios" value="sim"></td>
+                    <td><input type="radio" name="comunica_balbucios" value="nao"></td>
+                    <td><input type="radio" name="comunica_balbucios" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Estabelece vínculos com o professor</td>
+                    <td><input type="radio" name="vinculos_professor" value="sim"></td>
+                    <td><input type="radio" name="vinculos_professor" value="nao"></td>
+                    <td><input type="radio" name="vinculos_professor" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Ouve, percebe e discrimina eventos sonoros diversos</td>
+                    <td><input type="radio" name="discrimina_sons" value="sim"></td>
+                    <td><input type="radio" name="discrimina_sons" value="nao"></td>
+                    <td><input type="radio" name="discrimina_sons" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Percebe e expressa sensações, sentimento e pensamentos, por meio de improvisações, composições e interpretações musicais</td>
+                    <td><input type="radio" name="expressa_sensacoes" value="sim"></td>
+                    <td><input type="radio" name="expressa_sensacoes" value="nao"></td>
+                    <td><input type="radio" name="expressa_sensacoes" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Desloca-se com destreza progressiva no espaço, alongar, correr e pular</td>
+                    <td><input type="radio" name="desloca_destreza" value="sim"></td>
+                    <td><input type="radio" name="desloca_destreza" value="nao"></td>
+                    <td><input type="radio" name="desloca_destreza" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Explora e utiliza os movimentos de preensão, encaixe, lançamento, para ampliar suas possibilidades de manuseio dos diferentes materiais e objetos</td>
+                    <td><input type="radio" name="movimentos_prensao" value="sim"></td>
+                    <td><input type="radio" name="movimentos_prensao" value="nao"></td>
+                    <td><input type="radio" name="movimentos_prensao" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Experimenta sabores, percebe cheiros e escolhe o que quer comer</td>
+                    <td><input type="radio" name="experimenta_sabores" value="sim"></td>
+                    <td><input type="radio" name="experimenta_sabores" value="nao"></td>
+                    <td><input type="radio" name="experimenta_sabores" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Participa em histórias lidas ou contadas pela professora e canta com ela e as crianças</td>
+                    <td><input type="radio" name="participa_historias" value="sim"></td>
+                    <td><input type="radio" name="participa_historias" value="nao"></td>
+                    <td><input type="radio" name="participa_historias" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Identifica-se e identifica as pessoas com as quais convive</td>
+                    <td><input type="radio" name="identifica_pessoas" value="sim"></td>
+                    <td><input type="radio" name="identifica_pessoas" value="nao"></td>
+                    <td><input type="radio" name="identifica_pessoas" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>É afetuoso, demonstra constantemente o seu carinho para com os colegas e o professor</td>
+                    <td><input type="radio" name="afetivo" value="sim"></td>
+                    <td><input type="radio" name="afetivo" value="nao"></td>
+                    <td><input type="radio" name="afetivo" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Aparenta desejar atenções diferenciadas para si, solicitando que sejam feitas todas as suas vontades</td>
+                    <td><input type="radio" name="deseja_atencoes" value="sim"></td>
+                    <td><input type="radio" name="deseja_atencoes" value="nao"></td>
+                    <td><input type="radio" name="deseja_atencoes" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Ainda não sabe dividir o espaço e os materiais de forma coletiva</td>
+                    <td><input type="radio" name="dividir_espaco" value="sim"></td>
+                    <td><input type="radio" name="dividir_espaco" value="nao"></td>
+                    <td><input type="radio" name="dividir_espaco" value="em_processo"></td>
+                </tr>
+                <tr>
+                    <td>Sou frequente nas aulas</td>
+                    <td><input type="radio" name="frequente_aulas" value="sim"></td>
+                    <td><input type="radio" name="frequente_aulas" value="nao"></td>
+                    <td><input type="radio" name="frequente_aulas" value="em_processo"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        document.getElementById('diarioForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData.entries());
+            const aspectos = {};
+
+            // Pegando todos os aspectos e seus valores
+            document.querySelectorAll('#aspectos tr').forEach(tr => {
+                const aspecto = tr.cells[0].innerText;
+                const value = Array.from(tr.querySelectorAll('input')).find(input => input.checked)?.value;
+                aspectos[aspecto] = value || 'não_avaliado';
+            });
+
+            data.aspectos = aspectos;
+
+            fetch('/api/dados', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            }).then(response => response.text())
+              .then(result => alert(result))
+              .catch(error => console.error('Erro:', error));
+        });
+    </script>
+</body>
+</html>
